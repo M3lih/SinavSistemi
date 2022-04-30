@@ -16,5 +16,30 @@ namespace SınavSistemi
         {
             InitializeComponent();
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
