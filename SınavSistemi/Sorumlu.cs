@@ -25,12 +25,19 @@ namespace SınavSistemi
         private void Sorumlu_Load(object sender, EventArgs e)
         {
             sorumlu_YeniSoruEkle1.Visible = false;
+            sorumlu_SoruGuncelle1.Visible = false;
         }
 
         private void BtnSoruEkle_Click(object sender, EventArgs e)
         {
             sorumlu_YeniSoruEkle1.Visible = true;
             sorumlu_YeniSoruEkle1.BringToFront();   
+        }
+
+        private void btnSoruGuncelle_Click(object sender, EventArgs e)
+        {
+            sorumlu_SoruGuncelle1.Visible=true;
+            sorumlu_SoruGuncelle1.BringToFront();
         }
     }
 }
