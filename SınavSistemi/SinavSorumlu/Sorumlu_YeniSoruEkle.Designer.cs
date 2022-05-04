@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUnite = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblSoruNo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSoru = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSecenekA = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCevap = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtSecenekC = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSecenekD = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSecenekB = new System.Windows.Forms.TextBox();
+            this.lblHatali = new System.Windows.Forms.Label();
+            this.btnSonraki = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSifirla = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBitir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
             // 
@@ -69,17 +69,19 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.26415F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(33, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 24);
+            this.label2.Size = new System.Drawing.Size(64, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Güncelle";
+            this.label2.Text = "Ünite";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtUnite
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(415, 25);
-            this.textBox1.TabIndex = 2;
+            this.txtUnite.ForeColor = System.Drawing.Color.Black;
+            this.txtUnite.Location = new System.Drawing.Point(33, 161);
+            this.txtUnite.Name = "txtUnite";
+            this.txtUnite.Size = new System.Drawing.Size(415, 25);
+            this.txtUnite.TabIndex = 2;
+            this.txtUnite.TextChanged += new System.EventHandler(this.txtUnite_TextChanged);
             // 
             // label3
             // 
@@ -92,18 +94,18 @@
             this.label3.Text = "Soru No:";
             this.label3.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label4
+            // lblSoruNo
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.26415F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(684, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "11";
-            this.label4.Click += new System.EventHandler(this.label2_Click);
+            this.lblSoruNo.AutoSize = true;
+            this.lblSoruNo.BackColor = System.Drawing.Color.White;
+            this.lblSoruNo.Font = new System.Drawing.Font("Century Gothic", 14.26415F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblSoruNo.ForeColor = System.Drawing.Color.Red;
+            this.lblSoruNo.Location = new System.Drawing.Point(684, 184);
+            this.lblSoruNo.Name = "lblSoruNo";
+            this.lblSoruNo.Size = new System.Drawing.Size(34, 24);
+            this.lblSoruNo.TabIndex = 1;
+            this.lblSoruNo.Text = "11";
+            this.lblSoruNo.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
@@ -116,12 +118,13 @@
             this.label5.Text = "Soru";
             this.label5.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // txtSoru
             // 
-            this.textBox2.Location = new System.Drawing.Point(68, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(415, 25);
-            this.textBox2.TabIndex = 2;
+            this.txtSoru.ForeColor = System.Drawing.Color.Black;
+            this.txtSoru.Location = new System.Drawing.Point(68, 258);
+            this.txtSoru.Name = "txtSoru";
+            this.txtSoru.Size = new System.Drawing.Size(415, 25);
+            this.txtSoru.TabIndex = 2;
             // 
             // label6
             // 
@@ -134,12 +137,13 @@
             this.label6.Text = "A:";
             this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox3
+            // txtSecenekA
             // 
-            this.textBox3.Location = new System.Drawing.Point(68, 397);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(415, 25);
-            this.textBox3.TabIndex = 2;
+            this.txtSecenekA.ForeColor = System.Drawing.Color.Black;
+            this.txtSecenekA.Location = new System.Drawing.Point(68, 397);
+            this.txtSecenekA.Name = "txtSecenekA";
+            this.txtSecenekA.Size = new System.Drawing.Size(415, 25);
+            this.txtSecenekA.TabIndex = 2;
             // 
             // label7
             // 
@@ -152,12 +156,13 @@
             this.label7.Text = "Cevap";
             this.label7.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox4
+            // txtCevap
             // 
-            this.textBox4.Location = new System.Drawing.Point(606, 564);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(415, 25);
-            this.textBox4.TabIndex = 2;
+            this.txtCevap.ForeColor = System.Drawing.Color.Black;
+            this.txtCevap.Location = new System.Drawing.Point(606, 564);
+            this.txtCevap.Name = "txtCevap";
+            this.txtCevap.Size = new System.Drawing.Size(415, 25);
+            this.txtCevap.TabIndex = 2;
             // 
             // label8
             // 
@@ -170,12 +175,13 @@
             this.label8.Text = "C:";
             this.label8.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox5
+            // txtSecenekC
             // 
-            this.textBox5.Location = new System.Drawing.Point(71, 595);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(415, 25);
-            this.textBox5.TabIndex = 2;
+            this.txtSecenekC.ForeColor = System.Drawing.Color.Black;
+            this.txtSecenekC.Location = new System.Drawing.Point(71, 595);
+            this.txtSecenekC.Name = "txtSecenekC";
+            this.txtSecenekC.Size = new System.Drawing.Size(415, 25);
+            this.txtSecenekC.TabIndex = 2;
             // 
             // label9
             // 
@@ -188,12 +194,13 @@
             this.label9.Text = "D:";
             this.label9.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox6
+            // txtSecenekD
             // 
-            this.textBox6.Location = new System.Drawing.Point(68, 717);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(415, 25);
-            this.textBox6.TabIndex = 2;
+            this.txtSecenekD.ForeColor = System.Drawing.Color.Black;
+            this.txtSecenekD.Location = new System.Drawing.Point(68, 717);
+            this.txtSecenekD.Name = "txtSecenekD";
+            this.txtSecenekD.Size = new System.Drawing.Size(415, 25);
+            this.txtSecenekD.TabIndex = 2;
             // 
             // label10
             // 
@@ -206,80 +213,84 @@
             this.label10.Text = "B:";
             this.label10.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox7
+            // txtSecenekB
             // 
-            this.textBox7.Location = new System.Drawing.Point(71, 508);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(415, 25);
-            this.textBox7.TabIndex = 2;
+            this.txtSecenekB.ForeColor = System.Drawing.Color.Black;
+            this.txtSecenekB.Location = new System.Drawing.Point(71, 508);
+            this.txtSecenekB.Name = "txtSecenekB";
+            this.txtSecenekB.Size = new System.Drawing.Size(415, 25);
+            this.txtSecenekB.TabIndex = 2;
             // 
-            // label11
+            // lblHatali
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(123, 199);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 19);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Hatalı giriş";
-            this.label11.Click += new System.EventHandler(this.label2_Click);
+            this.lblHatali.AutoSize = true;
+            this.lblHatali.BackColor = System.Drawing.Color.White;
+            this.lblHatali.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblHatali.ForeColor = System.Drawing.Color.Red;
+            this.lblHatali.Location = new System.Drawing.Point(123, 199);
+            this.lblHatali.Name = "lblHatali";
+            this.lblHatali.Size = new System.Drawing.Size(91, 19);
+            this.lblHatali.TabIndex = 1;
+            this.lblHatali.Text = "Hatalı giriş";
+            this.lblHatali.Click += new System.EventHandler(this.label2_Click);
             // 
-            // guna2Button1
+            // btnSonraki
             // 
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(606, 615);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(199, 50);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Sonraki";
+            this.btnSonraki.BorderRadius = 18;
+            this.btnSonraki.BorderThickness = 1;
+            this.btnSonraki.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSonraki.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSonraki.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSonraki.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSonraki.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
+            this.btnSonraki.Font = new System.Drawing.Font("Century Gothic", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSonraki.ForeColor = System.Drawing.Color.White;
+            this.btnSonraki.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnSonraki.Location = new System.Drawing.Point(606, 615);
+            this.btnSonraki.Name = "btnSonraki";
+            this.btnSonraki.Size = new System.Drawing.Size(199, 50);
+            this.btnSonraki.TabIndex = 3;
+            this.btnSonraki.Text = "Sonraki";
+            this.btnSonraki.Click += new System.EventHandler(this.btnSonraki_Click);
             // 
-            // guna2Button2
+            // btnSifirla
             // 
-            this.guna2Button2.BorderRadius = 18;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(810, 615);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(199, 50);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "Sıfırla";
+            this.btnSifirla.BorderRadius = 18;
+            this.btnSifirla.BorderThickness = 1;
+            this.btnSifirla.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSifirla.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSifirla.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSifirla.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSifirla.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(225)))));
+            this.btnSifirla.Font = new System.Drawing.Font("Century Gothic", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSifirla.ForeColor = System.Drawing.Color.White;
+            this.btnSifirla.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnSifirla.Location = new System.Drawing.Point(810, 615);
+            this.btnSifirla.Name = "btnSifirla";
+            this.btnSifirla.Size = new System.Drawing.Size(199, 50);
+            this.btnSifirla.TabIndex = 3;
+            this.btnSifirla.Text = "Sıfırla";
+            this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click);
             // 
-            // guna2Button3
+            // btnBitir
             // 
-            this.guna2Button3.BackColor = System.Drawing.Color.White;
-            this.guna2Button3.BorderRadius = 18;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 14.26415F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(606, 671);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(403, 50);
-            this.guna2Button3.TabIndex = 3;
-            this.guna2Button3.Text = "Bitir";
+            this.btnBitir.BackColor = System.Drawing.Color.White;
+            this.btnBitir.BorderRadius = 18;
+            this.btnBitir.BorderThickness = 1;
+            this.btnBitir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBitir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBitir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBitir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBitir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBitir.Font = new System.Drawing.Font("Century Gothic", 14.26415F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBitir.ForeColor = System.Drawing.Color.Black;
+            this.btnBitir.HoverState.FillColor = System.Drawing.Color.Black;
+            this.btnBitir.Location = new System.Drawing.Point(606, 671);
+            this.btnBitir.Name = "btnBitir";
+            this.btnBitir.Size = new System.Drawing.Size(403, 50);
+            this.btnBitir.TabIndex = 3;
+            this.btnBitir.Text = "Bitir";
+            this.btnBitir.Click += new System.EventHandler(this.btnBitir_Click);
             // 
             // guna2Elipse1
             // 
@@ -290,29 +301,31 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.btnSifirla);
+            this.Controls.Add(this.btnBitir);
+            this.Controls.Add(this.btnSonraki);
+            this.Controls.Add(this.txtSecenekD);
+            this.Controls.Add(this.txtSecenekC);
+            this.Controls.Add(this.txtSecenekB);
+            this.Controls.Add(this.txtCevap);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSecenekA);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSoru);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUnite);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblHatali);
+            this.Controls.Add(this.lblSoruNo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Sorumlu_YeniSoruEkle";
             this.Size = new System.Drawing.Size(1091, 870);
+            this.Load += new System.EventHandler(this.Sorumlu_YeniSoruEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,25 +335,25 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtUnite;
         private Label label3;
-        private Label label4;
+        private Label lblSoruNo;
         private Label label5;
-        private TextBox textBox2;
+        private TextBox txtSoru;
         private Label label6;
-        private TextBox textBox3;
+        private TextBox txtSecenekA;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox txtCevap;
         private Label label8;
-        private TextBox textBox5;
+        private TextBox txtSecenekC;
         private Label label9;
-        private TextBox textBox6;
+        private TextBox txtSecenekD;
         private Label label10;
-        private TextBox textBox7;
-        private Label label11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private TextBox txtSecenekB;
+        private Label lblHatali;
+        private Guna.UI2.WinForms.Guna2Button btnSonraki;
+        private Guna.UI2.WinForms.Guna2Button btnSifirla;
+        private Guna.UI2.WinForms.Guna2Button btnBitir;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
