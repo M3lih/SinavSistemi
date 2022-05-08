@@ -26,6 +26,7 @@ namespace SınavSistemi
         {
             sorumlu_YeniSoruEkle1.Visible = false;
             sorumlu_SoruGuncelle1.Visible = false;
+            sorumlu_SoruGoruntuleSil1.Visible = false;
         }
 
         private void BtnSoruEkle_Click(object sender, EventArgs e)
@@ -38,6 +39,13 @@ namespace SınavSistemi
         {
             sorumlu_SoruGuncelle1.Visible=true;
             sorumlu_SoruGuncelle1.BringToFront();
+        }
+
+        private void btnSoruGoruntuleSil_Click(object sender, EventArgs e)
+        {
+            sorumlu_SoruGoruntuleSil1.Visible=true;
+            sorumlu_SoruGoruntuleSil1.BringToFront();
+
         }
     }
 }
