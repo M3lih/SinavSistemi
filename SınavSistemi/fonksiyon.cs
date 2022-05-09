@@ -13,7 +13,7 @@ namespace SınavSistemi
         protected SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = MK;database = sinavsistemi;integrated security= True";
+            con.ConnectionString = "data source = RAMAZAN;database = sinavsistemi;integrated security= True";
             return con;
         }
         

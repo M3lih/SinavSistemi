@@ -1,3 +1,14 @@
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 namespace SınavSistemi
 {
     public partial class Form1 : Form
@@ -6,7 +17,11 @@ namespace SınavSistemi
         {
             InitializeComponent();
         }
-         
+        
+
+        SqlConnection baglanti = new SqlConnection(@"data source = RAMAZAN;database = sinavsistemi;integrated security= True");
+        
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,6 +45,7 @@ namespace SınavSistemi
             {
                 panel2.Visible = true;
                 panel1.Visible = false;
+
             }
             else if(txtKullaniciSecim.SelectedIndex == 1)
             {
@@ -66,6 +82,41 @@ namespace SınavSistemi
             {
                 WrongLabel.Visible = true;
             }
+        }
+
+        private void btnOgrenciKayit_Click(object sender, EventArgs e)
+        {
+            frmKayit kayit = new frmKayit();
+            kayit.ShowDialog();
+           
+        }
+
+        private void btnOgrenciGiris_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            string ogrenciNo = txtOgrenciNo.Text;
+            string sifre = txtSifre2.Text;
+
+            SqlCommand komut = new SqlCommand("select * from kullanici where ogrNo = '" + ogrenciNo + "' and sifre = '"+sifre+"'",baglanti);
+            SqlDataReader oku = komut.ExecuteReader();
+            if (oku.Read())
+            {
+                MessageBox.Show("Hosgeldiniz");
+            }
+            else
+            {
+                MessageBox.Show("Yanlış Ogrenci No Veya Sifre Girisi");
+               
+            }
+
+            baglanti.Close();   
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmSifre sifre = new frmSifre();
+            sifre.ShowDialog();
         }
     }
 }
