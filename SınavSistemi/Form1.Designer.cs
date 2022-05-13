@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnk_sifreunuttum = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSifre2 = new System.Windows.Forms.TextBox();
             this.btnOgrenciKayit = new System.Windows.Forms.Button();
@@ -220,7 +220,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.linkLabel1);
+            this.panel2.Controls.Add(this.lnk_sifreunuttum);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtSifre2);
             this.panel2.Controls.Add(this.btnOgrenciKayit);
@@ -234,16 +234,16 @@
             this.panel2.Size = new System.Drawing.Size(384, 375);
             this.panel2.TabIndex = 4;
             // 
-            // linkLabel1
+            // lnk_sifreunuttum
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(137, 304);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(95, 15);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Şifremi Unuttum";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnk_sifreunuttum.AutoSize = true;
+            this.lnk_sifreunuttum.Location = new System.Drawing.Point(137, 304);
+            this.lnk_sifreunuttum.Name = "lnk_sifreunuttum";
+            this.lnk_sifreunuttum.Size = new System.Drawing.Size(95, 15);
+            this.lnk_sifreunuttum.TabIndex = 5;
+            this.lnk_sifreunuttum.TabStop = true;
+            this.lnk_sifreunuttum.Text = "Şifremi Unuttum";
+            this.lnk_sifreunuttum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label6
             // 
@@ -389,6 +389,6 @@
         private Label label11;
         private Label label6;
         private TextBox txtSifre2;
-        private LinkLabel linkLabel1;
+        private LinkLabel lnk_sifreunuttum;
     }
 }

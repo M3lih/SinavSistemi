@@ -92,25 +92,14 @@ namespace SınavSistemi
         }
 
         private void btnOgrenciGiris_Click(object sender, EventArgs e)
-        {
-            baglanti.Open();
-            string ogrenciNo = txtOgrenciNo.Text;
-            string sifre = txtSifre2.Text;
-
-            SqlCommand komut = new SqlCommand("select * from kullanici where ogrNo = '" + ogrenciNo + "' and sifre = '"+sifre+"'",baglanti);
-            SqlDataReader oku = komut.ExecuteReader();
-            if (oku.Read())
+        { 
+            Ogrenci ogrenci = new Ogrenci();
+            bool result = ogrenci.OgrenciGirisKontrol(txtOgrenciNo.Text, txtSifre2.Text);
+            if (result)
             {
-                MessageBox.Show("Hosgeldiniz");
+                this.Hide();
+                MessageBox.Show("giris basarili");
             }
-            else
-            {
-                MessageBox.Show("Yanlış Ogrenci No Veya Sifre Girisi");
-               
-            }
-
-            baglanti.Close();   
-            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -23,12 +23,10 @@ namespace SınavSistemi
       
         private void btn_kayit_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into kullanici values('" + txt_isim.Text + "','" + txt_soyisim.Text + "','" + txt_adres.Text + "','" + txt_ogrno.Text + "','" + txt_telno.Text + "','" + txt_sifre.Text + "')",baglanti);
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            MessageBox.Show("Kayit Yapildi");
-            this.Hide();
+            Ogrenci ogrenci = new Ogrenci();
+            ogrenci.YeniKullaniciEkle(txt_isim.Text, txt_soyisim.Text, txt_adres.Text, txt_ogrno.Text, txt_telno.Text, txt_sifre.Text);
+            MessageBox.Show("kayit basarili");
+            this.Close();
             
         }
     }
