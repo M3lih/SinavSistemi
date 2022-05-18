@@ -104,14 +104,9 @@ namespace SınavSistemi
         private void btnOgrenciGiris_Click(object sender, EventArgs e)
         { 
             ogrenci ogrenci = new ogrenci();
-            bool result = ogrenci.OgrenciGirisKontrol(txtOgrenciNo.Text, txtSifre2.Text);
-            if (result)
-            {
-                this.Hide();
-                frmOgrenci frmOgrenci = new frmOgrenci();
-                frmOgrenci.ShowDialog();
-                this.Hide();
-            }
+            ogrenci.OgrenciGirisi(txtOgrenciNo.Text, txtSifre2.Text);
+            
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

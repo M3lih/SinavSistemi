@@ -21,33 +21,39 @@ namespace SınavSistemi
 
 
 
-
-        public bool OgrenciGirisKontrol(string ogrno,string sifre)
+        SqlDataReader oku;
+        public SqlDataReader OgrenciGirisi(string ogrno,string sifre)
         {
-            bool result = false;
-
-            SqlCommand komut = new SqlCommand("select * from kullanici where ogrNo=@ogrno and sifre=@sifre", baglanti);
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select * from kullanici where ogrNo =@ogrno", baglanti);
             komut.Parameters.Add("@ogrno", SqlDbType.NVarChar).Value = ogrno;
             komut.Parameters.Add("@sifre", SqlDbType.NVarChar).Value = sifre;
-
-            try
+            oku = komut.ExecuteReader();
+            if (oku.Read() == true)
             {
-                if (baglanti.State==ConnectionState.Closed)
+                if (sifre==oku["sifre"].ToString())
                 {
-                    baglanti.Open();
+                    
+                    frmOgrenci frmOgrenci = new frmOgrenci();
+                    frmOgrenci.ShowDialog();
+                    
                 }
-
-                result= Convert.ToBoolean(komut.ExecuteScalar());
-
+                else
+                {
+                    MessageBox.Show("Sifrenizi Kontrol ediniz");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                string hata = ex.Message;
-                throw;
+                MessageBox.Show("Bilgilerinizi Komtrol edinşz");
             }
+            baglanti.Close();
+            return oku;
 
-            return true;
+
+
         }
+
 
         public void YeniKullaniciEkle(string ad ,string soyad ,string adres ,string ogrno, string telno, string sifre)
         {

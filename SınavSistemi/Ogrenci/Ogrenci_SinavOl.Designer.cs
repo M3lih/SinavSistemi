@@ -38,7 +38,14 @@
             this.rdb_cevap1 = new System.Windows.Forms.RadioButton();
             this.btnSonraki = new Guna.UI2.WinForms.Guna2Button();
             this.btn_bitir = new Guna.UI2.WinForms.Guna2Button();
+            this.sayac = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblDakika = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblSaniye = new System.Windows.Forms.Label();
             this.grp_soru.SuspendLayout();
+            this.sayac.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -63,7 +70,7 @@
             this.grp_soru.Controls.Add(this.rdb_cevap2);
             this.grp_soru.Controls.Add(this.rdb_cevap1);
             this.grp_soru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.grp_soru.Location = new System.Drawing.Point(138, 74);
+            this.grp_soru.Location = new System.Drawing.Point(57, 87);
             this.grp_soru.Name = "grp_soru";
             this.grp_soru.Size = new System.Drawing.Size(853, 485);
             this.grp_soru.TabIndex = 23;
@@ -131,7 +138,7 @@
             this.btnSonraki.ForeColor = System.Drawing.Color.White;
             this.btnSonraki.HoverState.FillColor = System.Drawing.Color.White;
             this.btnSonraki.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btnSonraki.Location = new System.Drawing.Point(561, 594);
+            this.btnSonraki.Location = new System.Drawing.Point(86, 599);
             this.btnSonraki.Name = "btnSonraki";
             this.btnSonraki.Size = new System.Drawing.Size(173, 44);
             this.btnSonraki.TabIndex = 28;
@@ -151,16 +158,85 @@
             this.btn_bitir.ForeColor = System.Drawing.Color.White;
             this.btn_bitir.HoverState.FillColor = System.Drawing.Color.White;
             this.btn_bitir.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.btn_bitir.Location = new System.Drawing.Point(818, 594);
+            this.btn_bitir.Location = new System.Drawing.Point(360, 599);
             this.btn_bitir.Name = "btn_bitir";
             this.btn_bitir.Size = new System.Drawing.Size(173, 44);
             this.btn_bitir.TabIndex = 29;
             this.btn_bitir.Text = "Bitir";
+            this.btn_bitir.Click += new System.EventHandler(this.btn_bitir_Click);
+            // 
+            // sayac
+            // 
+            this.sayac.Controls.Add(this.label2);
+            this.sayac.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.sayac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sayac.ForeColor = System.Drawing.Color.White;
+            this.sayac.Location = new System.Drawing.Point(942, 77);
+            this.sayac.Maximum = 600;
+            this.sayac.Minimum = 0;
+            this.sayac.Name = "sayac";
+            this.sayac.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.sayac.Size = new System.Drawing.Size(108, 108);
+            this.sayac.TabIndex = 30;
+            this.sayac.Text = "guna2CircleProgressBar1";
+            this.sayac.Value = 600;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(29, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Süre";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblDakika
+            // 
+            this.lblDakika.AutoSize = true;
+            this.lblDakika.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDakika.ForeColor = System.Drawing.Color.Black;
+            this.lblDakika.Location = new System.Drawing.Point(928, 237);
+            this.lblDakika.Name = "lblDakika";
+            this.lblDakika.Size = new System.Drawing.Size(41, 40);
+            this.lblDakika.TabIndex = 31;
+            this.lblDakika.Text = "--";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(990, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 40);
+            this.label4.TabIndex = 31;
+            this.label4.Text = ":";
+            // 
+            // lblSaniye
+            // 
+            this.lblSaniye.AutoSize = true;
+            this.lblSaniye.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSaniye.ForeColor = System.Drawing.Color.Black;
+            this.lblSaniye.Location = new System.Drawing.Point(1052, 237);
+            this.lblSaniye.Name = "lblSaniye";
+            this.lblSaniye.Size = new System.Drawing.Size(41, 40);
+            this.lblSaniye.TabIndex = 31;
+            this.lblSaniye.Text = "--";
             // 
             // Ogrenci_SinavOl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblSaniye);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblDakika);
+            this.Controls.Add(this.sayac);
             this.Controls.Add(this.btn_bitir);
             this.Controls.Add(this.btnSonraki);
             this.Controls.Add(this.grp_soru);
@@ -170,6 +246,8 @@
             this.Load += new System.EventHandler(this.Ogrenci_SinavOl_Load);
             this.grp_soru.ResumeLayout(false);
             this.grp_soru.PerformLayout();
+            this.sayac.ResumeLayout(false);
+            this.sayac.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +264,11 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button btnSonraki;
         private Guna.UI2.WinForms.Guna2Button btn_bitir;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar sayac;
+        private Label label2;
+        private System.Windows.Forms.Timer timer1;
+        private Label lblSaniye;
+        private Label label4;
+        private Label lblDakika;
     }
 }

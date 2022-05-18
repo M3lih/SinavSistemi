@@ -17,23 +17,30 @@ namespace SınavSistemi.Ogrenci
         {
             InitializeComponent();
             SoruGetir();
+            
         }
         SqlConnection baglanti = new SqlConnection(@"data source = RAMAZAN;database = sinavsistemi;integrated security= True");
+
+        int saniye = 60;
+        int dakika = 0;
         private void Ogrenci_SinavOl_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
+            dakika = Convert.ToInt32(10);
         }
 
-        string a1, a2, a3, a4, a5, a6, a7, a8, a9, a10;
-
+        string a1;
+      
 
         int sorusayisi = 0;
         private void btnSonraki_Click(object sender, EventArgs e)
         {
-            if (sorusayisi <2)
+            if (sorusayisi <9)
             {
                 SoruGetir();
+                CevapKontrol();
                 sorusayisi++;
+               
             }
             else
             {
@@ -46,7 +53,7 @@ namespace SınavSistemi.Ogrenci
         private int RandomSayi()
         {
             Random rd = new Random();
-            int x = rd.Next(1,4);
+            int x = rd.Next(1,80);
             return x;
         }
         public void SoruGetir()
@@ -78,7 +85,63 @@ namespace SınavSistemi.Ogrenci
             }
 
             
+            
         }
-           
+        string[] SoruCevap = new string[10];
+        int dogrusayisi = 0;
+        private void CevapKontrol()
+        {
+            if (rdb_cevap1.Checked)
+            {
+                SoruCevap[0] = " ";
+                SoruCevap[0] = rdb_cevap1.Text;
+            }
+            else if (rdb_cevap2.Checked)
+            {
+                SoruCevap[0] = " ";
+                SoruCevap[0] = rdb_cevap2.Text;
+
+            }
+            else if (rdb_cevap3.Checked)
+            {
+                SoruCevap[0] = " ";
+                SoruCevap[0] = rdb_cevap3.Text;
+            }
+            else if (rdb_cevap4.Checked)
+            {
+                SoruCevap[0] = " ";
+                SoruCevap[0] = rdb_cevap4.Text;
+            }
+            if (SoruCevap[0] == a1)
+            {
+                dogrusayisi = dogrusayisi + 1;
+            }
+            else
+            {
+                dogrusayisi = dogrusayisi;
+            }
+        }
+
+        private void btn_bitir_Click(object sender, EventArgs e)
+        {
+            CevapKontrol();
+            MessageBox.Show("" + dogrusayisi);
+            frmOgrenci frmOgrenci = new frmOgrenci();
+            frmOgrenci.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Interval = 1000;
+            saniye= saniye - 1;
+            lblSaniye.Text=saniye.ToString();
+            lblDakika.Text=(dakika-1).ToString();
+            if (saniye == 0)
+            {
+                dakika = dakika - 1;
+                lblDakika.Text=dakika.ToString();
+                saniye = 60;
+            }
+        }
     }
 }
