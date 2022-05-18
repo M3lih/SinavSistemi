@@ -23,7 +23,7 @@ namespace SınavSistemi
       
         private void btn_kayit_Click(object sender, EventArgs e)
         {
-            Ogrenci ogrenci = new Ogrenci();
+            ogrenci ogrenci = new ogrenci();
             ogrenci.YeniKullaniciEkle(txt_isim.Text, txt_soyisim.Text, txt_adres.Text, txt_ogrno.Text, txt_telno.Text, txt_sifre.Text);
             MessageBox.Show("kayit basarili");
             this.Close();

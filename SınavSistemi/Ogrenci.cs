@@ -8,7 +8,7 @@ using System.Data;
 
 namespace SınavSistemi
 {
-    public class Ogrenci
+    public class ogrenci
     {
         SqlConnection baglanti = new SqlConnection(@"data source = RAMAZAN;database = sinavsistemi;integrated security= True");
         public string Ad { get; set; }

@@ -51,11 +51,18 @@
             this.btnOgrenciGiris = new System.Windows.Forms.Button();
             this.txtOgrenciNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAdminGiris = new System.Windows.Forms.Button();
+            this.txt_admkullanici = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_admsifre = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -123,7 +130,7 @@
             this.panel1.Controls.Add(this.WrongLabel);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(729, 250);
+            this.panel1.Location = new System.Drawing.Point(716, 239);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 375);
             this.panel1.TabIndex = 4;
@@ -227,11 +234,10 @@
             this.panel2.Controls.Add(this.btnOgrenciGiris);
             this.panel2.Controls.Add(this.txtOgrenciNo);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(726, 250);
+            this.panel2.Location = new System.Drawing.Point(719, 251);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(384, 375);
+            this.panel2.Size = new System.Drawing.Size(384, 354);
             this.panel2.TabIndex = 4;
             // 
             // lnk_sifreunuttum
@@ -264,7 +270,7 @@
             this.txtSifre2.Name = "txtSifre2";
             this.txtSifre2.PasswordChar = '*';
             this.txtSifre2.Size = new System.Drawing.Size(337, 29);
-            this.txtSifre2.TabIndex = 3;
+            this.txtSifre2.TabIndex = 2;
             this.txtSifre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnOgrenciKayit
@@ -275,7 +281,7 @@
             this.btnOgrenciKayit.Location = new System.Drawing.Point(21, 259);
             this.btnOgrenciKayit.Name = "btnOgrenciKayit";
             this.btnOgrenciKayit.Size = new System.Drawing.Size(337, 37);
-            this.btnOgrenciKayit.TabIndex = 2;
+            this.btnOgrenciKayit.TabIndex = 4;
             this.btnOgrenciKayit.Text = "Kayıt OL";
             this.btnOgrenciKayit.UseVisualStyleBackColor = false;
             this.btnOgrenciKayit.Click += new System.EventHandler(this.btnOgrenciKayit_Click);
@@ -288,7 +294,7 @@
             this.btnOgrenciGiris.Location = new System.Drawing.Point(21, 206);
             this.btnOgrenciGiris.Name = "btnOgrenciGiris";
             this.btnOgrenciGiris.Size = new System.Drawing.Size(337, 37);
-            this.btnOgrenciGiris.TabIndex = 2;
+            this.btnOgrenciGiris.TabIndex = 3;
             this.btnOgrenciGiris.Text = "Giriş";
             this.btnOgrenciGiris.UseVisualStyleBackColor = false;
             this.btnOgrenciGiris.Click += new System.EventHandler(this.btnOgrenciGiris_Click);
@@ -315,17 +321,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Ogrenci Giris Numara";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(86, 336);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(193, 17);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Yanlıs Kullanıcı Adı veya Sifre";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -336,6 +331,83 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Ogrenci Giris";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAdminGiris);
+            this.panel3.Controls.Add(this.txt_admkullanici);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.txt_admsifre);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(752, 251);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(384, 375);
+            this.panel3.TabIndex = 5;
+            // 
+            // btnAdminGiris
+            // 
+            this.btnAdminGiris.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnAdminGiris.Font = new System.Drawing.Font("Segoe UI", 12.22642F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnAdminGiris.ForeColor = System.Drawing.Color.White;
+            this.btnAdminGiris.Location = new System.Drawing.Point(13, 259);
+            this.btnAdminGiris.Name = "btnAdminGiris";
+            this.btnAdminGiris.Size = new System.Drawing.Size(358, 37);
+            this.btnAdminGiris.TabIndex = 3;
+            this.btnAdminGiris.Text = "Giriş";
+            this.btnAdminGiris.UseVisualStyleBackColor = false;
+            this.btnAdminGiris.Click += new System.EventHandler(this.btnAdminGiris_Click);
+            // 
+            // txt_admkullanici
+            // 
+            this.txt_admkullanici.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_admkullanici.ForeColor = System.Drawing.Color.Black;
+            this.txt_admkullanici.Location = new System.Drawing.Point(13, 123);
+            this.txt_admkullanici.Name = "txt_admkullanici";
+            this.txt_admkullanici.Size = new System.Drawing.Size(358, 23);
+            this.txt_admkullanici.TabIndex = 1;
+            this.txt_admkullanici.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(168, 162);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 20);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Şifre";
+            // 
+            // txt_admsifre
+            // 
+            this.txt_admsifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_admsifre.ForeColor = System.Drawing.Color.Black;
+            this.txt_admsifre.Location = new System.Drawing.Point(13, 201);
+            this.txt_admsifre.Name = "txt_admsifre";
+            this.txt_admsifre.PasswordChar = '*';
+            this.txt_admsifre.Size = new System.Drawing.Size(358, 23);
+            this.txt_admsifre.TabIndex = 2;
+            this.txt_admsifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(134, 93);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Kullanıcı Adı";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(135, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Admin Girişi";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -343,6 +415,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1368, 678);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
@@ -359,6 +432,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,10 +460,16 @@
         private Button btnOgrenciGiris;
         private TextBox txtOgrenciNo;
         private Label label8;
-        private Label label10;
         private Label label11;
         private Label label6;
         private TextBox txtSifre2;
         private LinkLabel lnk_sifreunuttum;
+        private Panel panel3;
+        private Button btnAdminGiris;
+        private TextBox txt_admkullanici;
+        private Label label12;
+        private TextBox txt_admsifre;
+        private Label label9;
+        private Label label7;
     }
 }

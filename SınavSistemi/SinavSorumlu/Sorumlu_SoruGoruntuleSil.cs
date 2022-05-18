@@ -38,13 +38,13 @@ namespace SınavSistemi.SinavSorumlu
         {
             if(comboUnite.SelectedIndex != 0)
             {
-                sorgu = "select id,soruNo,soru,secenekA,secenekB,secenekC,secenekD,cevap from sorular where soruUnite = '"+comboUnite.Text+"'";
+                sorgu = "select soruID,soruNo,soru,secenekA,secenekB,secenekC,secenekD,cevap from sorular where soruUnite = '"+comboUnite.Text+"'";
                 DataSet ds = fn.getData(sorgu);
                 dataGridView1.DataSource = ds.Tables[0];
             }
             else
             {
-                sorgu = "select id,soruNo,soru,secenekA,secenekB,secenekC,secenekD,cevap from sorular";
+                sorgu = "select soruID,soruNo,soru,secenekA,secenekB,secenekC,secenekD,cevap from sorular";
                 DataSet ds = fn.getData(sorgu);   
                 dataGridView1.DataSource=ds.Tables[0];  
             }
@@ -74,7 +74,7 @@ namespace SınavSistemi.SinavSorumlu
         {
             if(MessageBox.Show("Emin misin?","Silme Onaylama!",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
             {
-                sorgu = "delete from sorular where id = " + id + " and soruNo = '" + soruNo + "'";
+                sorgu = "delete from sorular where soruID = " + id + " and soruNo = '" + soruNo + "'";
                 fn.setData(sorgu, "Soru Silindi.");
                 Sorumlu_SoruGoruntuleSil_Load(this, null);
             }

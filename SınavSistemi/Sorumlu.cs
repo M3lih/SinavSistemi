@@ -47,5 +47,12 @@ namespace SınavSistemi
             sorumlu_SoruGoruntuleSil1.BringToFront();
 
         }
+
+        private void btn_hesapcikis_Click(object sender, EventArgs e)
+        {
+           Form1 form1 = new Form1();
+            this.Close();
+            form1.ShowDialog();
+        }
     }
 }

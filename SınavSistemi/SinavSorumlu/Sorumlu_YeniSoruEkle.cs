@@ -54,8 +54,9 @@ namespace SınavSistemi.SinavSorumlu
             string secenekC = txtSecenekC.Text;
             string secenekD = txtSecenekD.Text;
             string cevap = txtCevap.Text;
+            string resim = txtResim.Text;
 
-            sorgu = "insert into sorular (soruUnite,soruNo,soru,secenekA,secenekB,secenekC,secenekD,cevap) values('" +soruUnite+"','"+soruNo+"','"+soru+"','" +secenekA+ "','" + secenekB + "','" + secenekC + "','" + secenekD + "','"+cevap+"' )";
+            sorgu = "insert into sorular (soruUnite,soruNo,soru,secenekA,secenekB,secenekC,secenekD,cevap,soruResim) values('" +soruUnite+"','"+soruNo+"','"+soru+"','" +secenekA+ "','" + secenekB + "','" + secenekC + "','" + secenekD + "','"+cevap+"','"+txtResim+"' )";
             fn.setData(sorgu, "Soru eklendi.");
             temizle();
             this.soruNo++;
@@ -109,6 +110,13 @@ namespace SınavSistemi.SinavSorumlu
                     lblHatali.Visible = true;
                 }
             }
+        }
+
+        private void btnResimEkle_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pictureBox1.ImageLocation = openFileDialog1.FileName;
+            txtResim.Text = openFileDialog1.FileName;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace SınavSistemi
 
         private void btn_sifredegistir_Click(object sender, EventArgs e)
         {
-            Ogrenci ogrenci = new Ogrenci();
+            ogrenci ogrenci = new ogrenci();
             ogrenci.SifremiUnuttumİslemi(txt_yogrno.Text, txt_yeniSifre.Text);
             this.Hide();
         }

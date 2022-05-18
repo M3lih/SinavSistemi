@@ -33,20 +33,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btncikis = new Guna.UI2.WinForms.Guna2Button();
             this.btnSoruGoruntuleSil = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_hesapcikis = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSoruGuncelle = new Guna.UI2.WinForms.Guna2Button();
             this.BtnSoruEkle = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sorumlu_SoruGoruntuleSil1 = new SınavSistemi.SinavSorumlu.Sorumlu_SoruGoruntuleSil();
             this.sorumlu_SoruGuncelle1 = new SınavSistemi.SinavSorumlu.Sorumlu_SoruGuncelle();
             this.sorumlu_YeniSoruEkle1 = new SınavSistemi.SinavSorumlu.Sorumlu_YeniSoruEkle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.sorumlu_SoruGoruntuleSil1 = new SınavSistemi.SinavSorumlu.Sorumlu_SoruGoruntuleSil();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,7 +58,7 @@
             this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btncikis);
             this.panel1.Controls.Add(this.btnSoruGoruntuleSil);
-            this.panel1.Controls.Add(this.guna2Button4);
+            this.panel1.Controls.Add(this.btn_hesapcikis);
             this.panel1.Controls.Add(this.guna2Button3);
             this.panel1.Controls.Add(this.btnSoruGuncelle);
             this.panel1.Controls.Add(this.BtnSoruEkle);
@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 870);
+            this.panel1.Size = new System.Drawing.Size(275, 768);
             this.panel1.TabIndex = 0;
             // 
             // btncikis
@@ -80,9 +80,9 @@
             this.btncikis.ForeColor = System.Drawing.Color.White;
             this.btncikis.Image = ((System.Drawing.Image)(resources.GetObject("btncikis.Image")));
             this.btncikis.ImageSize = new System.Drawing.Size(35, 35);
-            this.btncikis.Location = new System.Drawing.Point(6, 715);
+            this.btncikis.Location = new System.Drawing.Point(6, 631);
             this.btncikis.Name = "btncikis";
-            this.btncikis.Size = new System.Drawing.Size(72, 51);
+            this.btncikis.Size = new System.Drawing.Size(72, 45);
             this.btncikis.TabIndex = 8;
             this.btncikis.Click += new System.EventHandler(this.btncikis_Click);
             // 
@@ -101,33 +101,34 @@
             this.btnSoruGoruntuleSil.ForeColor = System.Drawing.Color.Black;
             this.btnSoruGoruntuleSil.Image = ((System.Drawing.Image)(resources.GetObject("btnSoruGoruntuleSil.Image")));
             this.btnSoruGoruntuleSil.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSoruGoruntuleSil.Location = new System.Drawing.Point(6, 553);
+            this.btnSoruGoruntuleSil.Location = new System.Drawing.Point(6, 488);
             this.btnSoruGoruntuleSil.Name = "btnSoruGoruntuleSil";
-            this.btnSoruGoruntuleSil.Size = new System.Drawing.Size(263, 51);
+            this.btnSoruGoruntuleSil.Size = new System.Drawing.Size(263, 45);
             this.btnSoruGoruntuleSil.TabIndex = 7;
             this.btnSoruGoruntuleSil.Text = "Soru Sil";
             this.btnSoruGoruntuleSil.Click += new System.EventHandler(this.btnSoruGoruntuleSil_Click);
             // 
-            // guna2Button4
+            // btn_hesapcikis
             // 
-            this.guna2Button4.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button4.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button4.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button4.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Turquoise;
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button4.Location = new System.Drawing.Point(3, 628);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(263, 51);
-            this.guna2Button4.TabIndex = 6;
-            this.guna2Button4.Text = "Log Out";
+            this.btn_hesapcikis.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btn_hesapcikis.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btn_hesapcikis.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btn_hesapcikis.CheckedState.ForeColor = System.Drawing.Color.Black;
+            this.btn_hesapcikis.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_hesapcikis.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_hesapcikis.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_hesapcikis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_hesapcikis.FillColor = System.Drawing.Color.Turquoise;
+            this.btn_hesapcikis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_hesapcikis.ForeColor = System.Drawing.Color.Black;
+            this.btn_hesapcikis.Image = ((System.Drawing.Image)(resources.GetObject("btn_hesapcikis.Image")));
+            this.btn_hesapcikis.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_hesapcikis.Location = new System.Drawing.Point(3, 554);
+            this.btn_hesapcikis.Name = "btn_hesapcikis";
+            this.btn_hesapcikis.Size = new System.Drawing.Size(263, 45);
+            this.btn_hesapcikis.TabIndex = 6;
+            this.btn_hesapcikis.Text = "Log Out";
+            this.btn_hesapcikis.Click += new System.EventHandler(this.btn_hesapcikis_Click);
             // 
             // guna2Button3
             // 
@@ -144,9 +145,9 @@
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(6, 479);
+            this.guna2Button3.Location = new System.Drawing.Point(6, 423);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(263, 51);
+            this.guna2Button3.Size = new System.Drawing.Size(263, 45);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Sınav Sonuçlarını Göster";
             // 
@@ -165,9 +166,9 @@
             this.btnSoruGuncelle.ForeColor = System.Drawing.Color.Black;
             this.btnSoruGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnSoruGuncelle.Image")));
             this.btnSoruGuncelle.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSoruGuncelle.Location = new System.Drawing.Point(6, 410);
+            this.btnSoruGuncelle.Location = new System.Drawing.Point(6, 362);
             this.btnSoruGuncelle.Name = "btnSoruGuncelle";
-            this.btnSoruGuncelle.Size = new System.Drawing.Size(263, 51);
+            this.btnSoruGuncelle.Size = new System.Drawing.Size(263, 45);
             this.btnSoruGuncelle.TabIndex = 4;
             this.btnSoruGuncelle.Text = "Soru Güncelle";
             this.btnSoruGuncelle.Click += new System.EventHandler(this.btnSoruGuncelle_Click);
@@ -187,9 +188,9 @@
             this.BtnSoruEkle.ForeColor = System.Drawing.Color.Black;
             this.BtnSoruEkle.Image = ((System.Drawing.Image)(resources.GetObject("BtnSoruEkle.Image")));
             this.BtnSoruEkle.ImageSize = new System.Drawing.Size(30, 30);
-            this.BtnSoruEkle.Location = new System.Drawing.Point(6, 342);
+            this.BtnSoruEkle.Location = new System.Drawing.Point(6, 302);
             this.BtnSoruEkle.Name = "BtnSoruEkle";
-            this.BtnSoruEkle.Size = new System.Drawing.Size(263, 51);
+            this.BtnSoruEkle.Size = new System.Drawing.Size(263, 45);
             this.BtnSoruEkle.TabIndex = 3;
             this.BtnSoruEkle.Text = "Soru Ekle";
             this.BtnSoruEkle.Click += new System.EventHandler(this.BtnSoruEkle_Click);
@@ -198,18 +199,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(76, 290);
+            this.label1.Location = new System.Drawing.Point(76, 256);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 37);
+            this.label1.Size = new System.Drawing.Size(111, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Sorumlu";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 43);
+            this.pictureBox2.Location = new System.Drawing.Point(17, 38);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(236, 223);
+            this.pictureBox2.Size = new System.Drawing.Size(236, 197);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -223,15 +224,23 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(275, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1500, 1200);
+            this.panel2.Size = new System.Drawing.Size(1500, 1059);
             this.panel2.TabIndex = 1;
+            // 
+            // sorumlu_SoruGoruntuleSil1
+            // 
+            this.sorumlu_SoruGoruntuleSil1.BackColor = System.Drawing.Color.White;
+            this.sorumlu_SoruGoruntuleSil1.Location = new System.Drawing.Point(0, 0);
+            this.sorumlu_SoruGoruntuleSil1.Name = "sorumlu_SoruGoruntuleSil1";
+            this.sorumlu_SoruGoruntuleSil1.Size = new System.Drawing.Size(1205, 848);
+            this.sorumlu_SoruGoruntuleSil1.TabIndex = 9;
             // 
             // sorumlu_SoruGuncelle1
             // 
             this.sorumlu_SoruGuncelle1.BackColor = System.Drawing.Color.White;
             this.sorumlu_SoruGuncelle1.Location = new System.Drawing.Point(0, -3);
             this.sorumlu_SoruGuncelle1.Name = "sorumlu_SoruGuncelle1";
-            this.sorumlu_SoruGuncelle1.Size = new System.Drawing.Size(1600, 1200);
+            this.sorumlu_SoruGuncelle1.Size = new System.Drawing.Size(1600, 1059);
             this.sorumlu_SoruGuncelle1.TabIndex = 2;
             // 
             // sorumlu_YeniSoruEkle1
@@ -240,7 +249,7 @@
             this.sorumlu_YeniSoruEkle1.ForeColor = System.Drawing.Color.Black;
             this.sorumlu_YeniSoruEkle1.Location = new System.Drawing.Point(0, 0);
             this.sorumlu_YeniSoruEkle1.Name = "sorumlu_YeniSoruEkle1";
-            this.sorumlu_YeniSoruEkle1.Size = new System.Drawing.Size(1600, 1200);
+            this.sorumlu_YeniSoruEkle1.Size = new System.Drawing.Size(1600, 1059);
             this.sorumlu_YeniSoruEkle1.TabIndex = 1;
             // 
             // pictureBox1
@@ -249,7 +258,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 870);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 768);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -266,19 +275,11 @@
             // 
             this.guna2Elipse3.TargetControl = this.panel2;
             // 
-            // sorumlu_SoruGoruntuleSil1
-            // 
-            this.sorumlu_SoruGoruntuleSil1.BackColor = System.Drawing.Color.White;
-            this.sorumlu_SoruGoruntuleSil1.Location = new System.Drawing.Point(0, 0);
-            this.sorumlu_SoruGoruntuleSil1.Name = "sorumlu_SoruGoruntuleSil1";
-            this.sorumlu_SoruGoruntuleSil1.Size = new System.Drawing.Size(1205, 961);
-            this.sorumlu_SoruGoruntuleSil1.TabIndex = 9;
-            // 
             // Sorumlu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1457, 774);
+            this.ClientSize = new System.Drawing.Size(1457, 683);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -304,7 +305,7 @@
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Button btncikis;
         private Guna.UI2.WinForms.Guna2Button btnSoruGoruntuleSil;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btn_hesapcikis;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btnSoruGuncelle;
         private Guna.UI2.WinForms.Guna2Button BtnSoruEkle;

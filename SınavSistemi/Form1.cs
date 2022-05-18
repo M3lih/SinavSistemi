@@ -36,6 +36,7 @@ namespace SınavSistemi
         {
             panel1.Visible = false;
             panel2.Visible = false;
+            panel3.Visible = false;
             WrongLabel.Visible = false;
         }
 
@@ -45,12 +46,21 @@ namespace SınavSistemi
             {
                 panel2.Visible = true;
                 panel1.Visible = false;
+                panel3.Visible = false;
 
             }
             else if(txtKullaniciSecim.SelectedIndex == 1)
             {
                 panel1.Visible = true;
-                panel2.Visible = false;   
+                panel2.Visible = false;  
+                panel3.Visible=false;
+                
+            }
+            else if (txtKullaniciSecim.SelectedIndex == 2)
+            {
+                panel1.Visible=false;
+                panel2.Visible=false;
+                panel3.Visible=true;
             }
         }
 
@@ -93,12 +103,14 @@ namespace SınavSistemi
 
         private void btnOgrenciGiris_Click(object sender, EventArgs e)
         { 
-            Ogrenci ogrenci = new Ogrenci();
+            ogrenci ogrenci = new ogrenci();
             bool result = ogrenci.OgrenciGirisKontrol(txtOgrenciNo.Text, txtSifre2.Text);
             if (result)
             {
                 this.Hide();
-                MessageBox.Show("giris basarili");
+                frmOgrenci frmOgrenci = new frmOgrenci();
+                frmOgrenci.ShowDialog();
+                this.Hide();
             }
         }
 
@@ -106,6 +118,18 @@ namespace SınavSistemi
         {
             frmSifre sifre = new frmSifre();
             sifre.ShowDialog();
+        }
+
+        private void btnAdminGiris_Click(object sender, EventArgs e)
+        {
+            if (txt_admkullanici.Text == "admin" && txt_admsifre.Text == "admin")
+            {
+                fmrAdmin admin = new fmrAdmin();
+                admin.ShowDialog();
+                this.Hide();
+            }
+            
+
         }
     }
 }
